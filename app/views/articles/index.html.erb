@@ -1,0 +1,9 @@
+<div class="container mt-5">
+<% @articles.each do |article| %>
+  <h4 class="text-left mt-20 mb-10 my-10">
+  <%= link_to article.title, article_path(article), class: "text-decoration-none font-weight-light" %>
+  <p><%= article.content %></p>
+  </h4>
+<% end %>
+<%= link_to "Add a new article", new_article_path %>
+</div>
